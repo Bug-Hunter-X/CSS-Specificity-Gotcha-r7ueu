@@ -1,0 +1,9 @@
+One way to fix this is to be more explicit with your CSS selectors, or use the `!important` flag (though this is generally discouraged). Here's a more straightforward solution that removes ambiguity:
+
+```css
+div p { color: blue; }
+.special p { color: red; }
+.special div p { color: green; }
+```
+
+This makes it clear which selector applies to which situation.  Always consider the order of your selectors and the specificity of each to avoid unexpected results.  Understanding how CSS specificity works can prevent many common layout and styling issues.
