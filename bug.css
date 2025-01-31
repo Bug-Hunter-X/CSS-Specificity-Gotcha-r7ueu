@@ -1,0 +1,9 @@
+The CSS specificity rules can sometimes lead to unexpected results.  For example, consider the following styles:
+
+```css
+div p { color: blue; }
+.special p { color: red; }
+div.special p { color: green; }
+```
+
+A `<div class="special"><p>This is some text</p></div>` element would be green, because the most specific selector (`div.special p`) wins.  However, it might not be obvious why this is the case or that a seemingly less specific selector is being overridden.
